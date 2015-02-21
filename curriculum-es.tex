@@ -1,0 +1,180 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% moderncv themes
+\moderncvstyle{casual}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvicons{awesome}
+
+\moderncvcolor{green}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+%\ifpdf
+%\RequirePackage[pdftex,]{hyperref}
+%\else
+%\RequirePackage[dvips]{hyperref}
+%\fi
+
+\usepackage[unicode,unicode,pdfpagelabels=false]{hyperref}
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+% Problema con el castellano
+%\usepackage[spanish,es-noshorthands]{babel} es-notilde
+%\usepackage[spanish]{babel}
+
+% adjust the page margins
+\usepackage{textcomp}
+
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Arturo}
+\familyname{Candela Moltó}
+\title{Currículum Vítae}               % optional, remove the line if not wanted
+\address{Alfonso El Magnánimo 13}{Alcoy, Alicante}    % optional, remove the line if not wanted
+\mobile{+34618037813}                    % optional, remove the line if not wanted
+%\phone{phone (optional)}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{info@arturocandela.net}                      % optional, remove the line if not wanted
+\homepage{arturocandela.net}                % optional, remove the line if not wanted
+\extrainfo{Nacimiento - marzo 20, 1984}
+
+%\extrainfo{additional information (optional)} % optional, remove the line if not wanted
+\photo[64pt][0pt]{yo_pro}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{El emprendedor no es un soñador, es un hacedor}                
+%\quote{Todo viaje de mil millas empieza con el primer paso, Lao-tzu}
+% optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+\makeatother
+
+% bibliography with mutiple entries
+\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+\newcites{book,web,android,ios}{{Publicaciones},{Webs},{Aplicaciones Android},{Aplicaciones iOS}}
+
+\input{hypersetup.tex}
+
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+
+%\input{cartapresentacion.tex}
+%\clearpage
+
+\maketitle
+
+\section{Experiencia}
+\cventry{2014 -*}{Ingenierio de QA}{Embarcadero Technologies, Inc.}{Elche}{}{Automatización de las tareas de testeo y diseño de planes de pruebas para productos.}
+\cventry{2010 -- 2014}{Técnico Investigador}{Universidad Politécnica de Valencia}{Alcoy}{}{Desempeño de tareas de investigación en los proyectos de investigación TacTic y Prometeo.}
+\cventry{2009}{Técnico Investigador}{Instituto Tecnológico de Informática}{Alcoy}{}{Responsable del proyecto VirtualCar para la visualización de automóviles modelizados.}
+\cventry{2006 -- 2008}{Responsable de Informática}{Cámara Oficial de Comercio e Industria de Alcoy}{}{}{Gestión de la red interna, gestión de las bases de datos y mantenimiento de la web. }%\newline{} Responsable del programa Nexopyme.
+
+\section{Formación Reglada}
+\cventry{2006--2008}{Máster Universitario en Software Libre}{Universitat Oberta de Catalunya}{Barcelona}{Nota media: 8,20}{}  % arguments 3 to 6 can be left empty
+\cventry{2006--2009}{Ingeniero Técnico en Informática de Gestión}{Universidad Politécnica de Valencia}{Alcoy}{Nota media: 6,7}{}
+\cventry{2002--2006}{Ingeniero Técnico de Telecomunicaciones especialidad Telemática}{Universidad Politécnica de Valencia}{Alcoy}{ Nota media 7,1}{}
+\cventry{2009}{Certificado de Aptitud Pedagógica}{Instituto de ciencias de la Educación de la UPV}{Alcoy}{}{}
+%\cventry{2006}{Grau Mitjà de Coneixements de Valencià}{Junta Qualificadora de Coneixements de Valencià}{}{}{}
+
+\section{Formación Complementaria}
+
+\cventry{2013}{Principios de programación funcional en Scala}{École Polytechnic Fédérale de Lausanne}{}{}{}
+
+\cventry{2012}{Brainstorm Users Meeting de 40 horas}{Brainstorm Multimedia S.L}{}{}{}
+
+\cventry{2012}{Curso de Programación para Android de 250 horas}{Escuela Universitaria de
+Formación Abierta del Grupo Master.D}{Universidad Camilo José Cela}{}{}
+
+\cventry{2011}{Desarrollo de Juegos y Aplicaciones Interactivas Multiplataforma (PC, MAC, WEB, IOS, ANDROID) con Unity3D de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
+\cventry{2009}{Documentos Técnicos y Científicos con \LaTeX de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
+
+\cventry{2009}{Introducción a la programación en C\# y .NET en Windows y Linux de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
+
+\cventry{2008}{Desarrollo Web avanzado mediante AJAX/GWT (Google Web Toolkit) de 20 horas}{Curso de Formación Permanente}{UPV}{}{}
+\cventry{2006}{Servidores Web de 20 horas}{Curso de Formación de Permanente}{UPV}{}{Incluye configuración del servidor web Apache y de Zope.}
+%\cventry{2006}{Autowebmarketing. Autogestión del Sitio Web Corporativo como Soporte del Plan de Marketing Empresarial de 12 horas}{Academia de las Cámaras}{Consejo Superior de Cámaras de Comercio}{Madrid}{}
+%\cventry{2005}{Seguridad en Redes Corporativas de 30 horas}{Curso de Formación Permanente}{UPV}{}{}
+%\cventry{2004}{Montaje, Planificación y Configuración de Redes Inalámbricas 20 horas}{Curso de Formación Permanete}{UPV}{}{}
+
+
+%Formacion Antigua
+%\cventry{2000}{Curso de Windows'95 y de Técnico de Programación en Turbo Pascal 140 horas}{ Centro de Formación – M@rqus}{Alcoy}{}{}
+%\cventry{1999}{Curso "Introducción al montaje y reparación del PC"}{Centro de Formación – M@rqus}{Alcoy}{}{}
+
+\section{Idiomas}
+\cvitemwithcomment{Valenciano}{Nivell Medio}{Certificado por la "Junta Qualificadora de Coneixments de Valencià" en 2006}
+\cvitemwithcomment{Castellano}{Nivel Alto}{Nativo}
+\cvitemwithcomment{Inglés}{Nivel Medio}{}
+
+\section{Informática}
+\cvdoubleitem{Lenguajes}{objective-C, Java, JavaScript, Python, C, C++, \href{http://www.php.net/}{PHP}, C\#, Pascal}{Plataformas Móviles}{\href{http://developer.android.com/}{Android},\href{http://www.apple.com/es/ios/}{iOS} (iPhone e iPad)}
+\cvdoubleitem{Bases de Datos}{\href{http://www.mysql.com/}{MySQL}, \href{http://www.postgresql.org/}{PostgreSQL},\href{http://couchdb.apache.org/}{couchdb},
+\href{http://www.sqlite.org/}{SQLite}}{Desarrollo en Grupo}{\href{http://trac.edgewall.org/}{Trac}, git, sourcetree,\href{https://es.atlassian.com/software/jira/}{Jira}, \href{http://subversion.apache.org/}{subversion},
+\href{http://tortoisesvn.tigris.org/}{TortoiseSVN}}
+\cvdoubleitem{Entornos de Desarrollo}{\href{https://developer.apple.com/xcode/}{Xcode}, \href{http://eclipse.org/}{Eclipse}, \href{http://msdn.microsoft.com/es-es/vstudio/default}{Visual Studio} }{}{}
+
+
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem[+]{Item 3}            % optional other symbol
+%
+%\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+%
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5}
+%\cvlistdoubleitem{Item 3}{ }
+
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+\section{Portfolio}
+
+%\nociteandroid{android:mislugares}
+\nociteandroid{android:wheelingmobileapp}
+\nociteandroid{android:thercomapp}
+\nociteandroid{android:elhondoapp}
+\nociteandroid{android:catralcityapp}
+
+\bibliographystyleandroid{plain}
+\bibliographyandroid{publications}
+
+\nociteios{ios:westvirginiamuseumapp}
+\nociteios{ios:catralcityapp}
+\nociteios{ios:elhondocityapp}
+\nociteios{ios:oglebayapp}
+
+\bibliographystyleios{plain}
+\bibliographyios{publications}
+
+\nocitebook{graficos_max_potencia}
+\nocitebook{mobweb}
+\bibliographystylebook{plain}
+\bibliographybook{publications}   % 'publications' is the name of a BibTeX file
+
+\section{Otros}
+\cvlistitem{Permiso de conducir B}
+
+\end{document}
+
+
+%% end of file `template_en.tex'.
