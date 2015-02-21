@@ -15,4 +15,6 @@ rm *.log;
 rm *.out;
 rm *.ps;
 
+
+git checkout hypersetup.tex
 echo "Proceso finalizado";
