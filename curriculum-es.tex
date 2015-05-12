@@ -6,6 +6,7 @@
 % available at http://www.latex-project.org/lppl/.
 
 \documentclass[11pt,a4paper,sans]{moderncv}
+\usepackage[firstyear=2006,lastyear=2015]{moderntimeline}
 
 % moderncv themes
 \moderncvstyle{casual}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -32,6 +33,7 @@
 \usepackage{textcomp}
 
 \usepackage[scale=0.8]{geometry}
+\setlength{\hintscolumnwidth}{3cm}           % si desea cambiar el ando de la columna para las fechas
 %\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 %\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
@@ -79,20 +81,20 @@
 \maketitle
 
 \section{Experiencia}
-\cventry{2014 -*}{Ingenierio de QA Software}{Embarcadero Technologies, Inc.}{Elche}{}{Automatización de las tareas de testeo y diseño de planes de pruebas para productos.}
-\cventry{2010 -- 2014}{Técnico de Investigación y Desarrollo de Software}{Universidad Politécnica de Valencia}{Alcoy}{}{Desempeño de tareas de investigación en los proyectos de investigación TacTic y Prometeo. Investigación y desarrollo de algoritmos para renderizar información vectorial sobre entornos 2D y 3D para hacer esa información accesible en tiempo real. Desarrollo de aplicaciones para demostrar el funcionamiento de esos algoritmos.\newline{}\newline{}
+\tlcventry{2014}{0}{Ingenierio de QA Software}{Embarcadero Technologies, Inc.}{Elche}{}{Automatización de las tareas de testeo y diseño de planes de pruebas para productos.}
+\tlcventry{2010}{2014}{Técnico de Investigación y Desarrollo de Software}{Universidad Politécnica de Valencia}{Alcoy}{}{Desempeño de tareas de investigación en los proyectos de investigación TacTic y Prometeo. Investigación y desarrollo de algoritmos para renderizar información vectorial sobre entornos 2D y 3D y hacela accesible en tiempo real. Desarrollo de aplicaciones para demostrar su funcionamiento.\newline{}\newline{}
 Detalle de las aplicaciones/algoritmos desarrollados:
 \begin{itemize}
 	\item \textbf{Android}:
 		\begin{itemize}
-			\item Desarrollo de un nuevo algotitmo de renderizado 2D de terreno utilizando OpenGL ES para Android para mostrar información vectorial interactiva en tiempo real.
+			\item Desarrollo de un nuevo algoritmo de renderizado 2D de terreno utilizando OpenGL ES para Android para mostrar información vectorial interactiva en tiempo real.
 			\item Aplicación para administrar un dispositivo bluetooth para la monitorización de la tempratura en entornos médicos e industriales
-			\item Aplicaciones para tener las últimas noticias de lo que está sucediendo en la ciudad que incluye información de: tiendas, eventos, teléfonos de interés, puntos de interés en un mapa, rutas cicloturistas. 
+			\item Aplicaciones para estar a la última de lo que está sucediendo en la ciudad. Incluye información de: tiendas, eventos, teléfonos de interés, puntos de interés en un mapa, rutas cicloturistas. 
 		\end{itemize}
 	\item \textbf{iOS}:
 		\begin{itemize}
 			\item Aplicación para un museo que tiene un juego y un lector de códigos Bidi (QR) con el que el usuario puede encontrar tesoros escondidos y ayudarle si se pierde.
-			\item Aplicaciones interactivas para estar al tanto de las últimas noticias de lo que está sucediendo en la ciudad y que incluye información de: tiendas, eventos, teléfonos de interés, puntos de interés en un mapa, rutas cicloturistas. 
+			\item Aplicaciones para estar a la última de lo que está sucediendo en la ciudad. Incluye información de: tiendas, eventos, teléfonos de interés, puntos de interés en un mapa, rutas cicloturistas. 
 		\end{itemize}
 	\item \textbf{nodejs}
 		\begin{itemize}
@@ -101,8 +103,8 @@ Detalle de las aplicaciones/algoritmos desarrollados:
 		\end{itemize}
 \end{itemize}}
 
-\cventry{2009}{Técnico de Investigación y Desarrollo de Software}{Instituto Tecnológico de Informática}{Alcoy}{}{Responsable de desarrollo del proyecto VirtualCar para la visualización de automóviles modelizados.}
-\cventry{2006 -- 2008}{Responsable de Informática}{Cámara Oficial de Comercio e Industria de Alcoy}{}{}{Gestión de la red interna, gestión de las bases de datos y mantenimiento de la web. }%\newline{} Responsable del programa Nexopyme.
+\tlcventry{2009}{2009}{Técnico de Investigación y Desarrollo de Software}{Instituto Tecnológico de Informática}{Alcoy}{}{Responsable de desarrollo del proyecto VirtualCar para la visualización de automóviles modelizados.}
+\tlcventry{2006}{2008}{Responsable de Informática}{Cámara Oficial de Comercio e Industria de Alcoy}{}{}{Gestión de la red interna, gestión de las bases de datos y mantenimiento de la web. }%\newline{} Responsable del programa Nexopyme.
 
 \section{Formación Reglada}
 \cventry{2006--2008}{Máster Universitario en Software Libre}{Universitat Oberta de Catalunya}{Barcelona}{Nota media: 8,20}{}  % arguments 3 to 6 can be left empty
@@ -137,18 +139,15 @@ Formación Abierta del Grupo Master.D}{Universidad Camilo José Cela}{}{}
 %\cventry{1999}{Curso "Introducción al montaje y reparación del PC"}{Centro de Formación – M@rqus}{Alcoy}{}{}
 
 \section{Idiomas}
-\cvitemwithcomment{Valenciano}{Nivell Mitjà}{Certificado por la "Junta Qualificadora de Coneixments de Valencià" en 2006}
-\cvitemwithcomment{Castellano}{Nivel Alto}{Nativo}
-\cvitemwithcomment{Inglés}{Nivel Medio}{}
+\cvitemwithcomment{Castellano}{Nativo}{}
+\cvitemwithcomment{Valenciano}{B2}{Certificado por la "Junta Qualificadora de Coneixments de Valencià" en 2006}
+\cvitemwithcomment{Inglés}{B1}{}
 
 \section{Informática}
-\cvdoubleitem{Lenguajes}{objective-C, Java, JavaScript, Python, C, C++, \href{http://www.php.net/}{PHP}, C\#, Pascal}{Plataformas Móviles}{\href{http://developer.android.com/}{Android},\href{http://www.apple.com/es/ios/}{iOS} (iPhone e iPad)}
-\cvdoubleitem{Bases de Datos}{\href{http://www.mysql.com/}{MySQL}, \href{http://www.postgresql.org/}{PostgreSQL},\href{http://couchdb.apache.org/}{couchdb},
-\href{http://www.sqlite.org/}{SQLite}}{Desarrollo en Grupo}{\href{http://trac.edgewall.org/}{Trac}, git, sourcetree,\href{https://es.atlassian.com/software/jira/}{Jira}, \href{http://subversion.apache.org/}{subversion},
-\href{http://tortoisesvn.tigris.org/}{TortoiseSVN}}
-\cvdoubleitem{Entornos de Desarrollo}{\href{https://developer.apple.com/xcode/}{Xcode}, \href{http://eclipse.org/}{Eclipse}, \href{http://msdn.microsoft.com/es-es/vstudio/default}{Visual Studio} }{}{}
-
-
+\cvdoubleitem{Lenguajes de Programación}{Objective-C, python, Java, JavaScript, C, C++, C\#}{Plataformas Móviles}{Android, iOS (iPhone e iPad)}
+\cvdoubleitem{Bases de Datos}{MongoDB, MySQL,PostgreSQL, SQLite, JavaDB,couchdb}{Trabajo en Grupo}{trac, JIRA, subversion, git (git-flow), SourceTree, Perforce}
+\cvdoubleitem{IDE}{Android Studio, XCode, eclipse, Visual Studio, Netbeans}{Gestión de Sistemas}{Windows, Linux, MacOS}
+\cvdoubleitem{Servidores de Automatización}{Jenkins}{}{}
 
 %\section{Extra 1}
 %\cvlistitem{Item 1}
