@@ -7,6 +7,7 @@
 
 
 \documentclass[11pt,a4paper,sans]{moderncv}
+\usepackage[firstyear=2006,lastyear=2015]{moderntimeline}
 
 % moderncv themes
 \moderncvstyle{casual}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -36,7 +37,7 @@
 
 % ajustes para los margenes de pagina
 \usepackage[scale=0.8]{geometry}
-\setlength{\hintscolumnwidth}{1.8cm}           % si desea cambiar el ando de la columna para las fechas
+\setlength{\hintscolumnwidth}{2cm}           % si desea cambiar el ando de la columna para las fechas
 
 %\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
@@ -86,7 +87,7 @@
 %  Embarcadero - 
 %
 
-\cventry{2014 - *}{Software Quality Assurance Engineer}{Embarcadero Technologies Inc}{Elche}{}
+\tlcventry{2014}{0}{Software Quality Assurance Engineer}{Embarcadero Technologies Inc}{Elche}{}
 {Write and automate tests for the ER/Studio Data Architect. Set up the testing environment to run the tests and generate reports. 
 \newline{}
 \begin{itemize}
@@ -96,10 +97,11 @@
 \item Connecting a MongoDB client on a Windows 7 machine to a CentOS server with MongoDB Enterprise Server using Kerberos authentication on a Windows 2008 Server.
 \item Confluence documentation of the different steps for the development of tests.
 \end{itemize}}
+
 %
 %    UPV (Prometeo, Android, iOS & nodejs)
 %
-\cventry{2010-2014}{Research and Software Developmenet Technician}{Polytechnic University of Valencia}{Alcoy}{}
+\tlcventry{2010}{2014}{Research and Software Developmenet Technician}{Polytechnic University of Valencia}{Alcoy}{}
 {Researched and deployed new algorithms for renderering vector information over a 2D and 3D to make this information real time accesible. Develop the aplications to desmotrate these algorithms.
 \newline{}\newline{}
 Detail of the applications deployed:
@@ -122,8 +124,8 @@ Detail of the applications deployed:
 		\end{itemize}
 \end{itemize}}
 
-\cventry{2009}{Research and Software Developmenet Technician}{Institute of IT Technology}{Alcoy}{}{Person in charge of the project VirtualCar (A 3D interactive renderer for modelized cars)}
-\cventry{2006}{IT - Supervisor}{Chamber of Commerce}{Alcoy}{}{Network manager, databse admin, maintenance of the website. Person in charge of the program Nexopyme}
+\tlcventry{2009}{2009}{Research and Software Developmenet Technician}{Institute of IT Technology}{Alcoy}{}{Person in charge of the project VirtualCar (A 3D interactive renderer for modelized cars)}
+\tlcventry{2006}{2008}{IT - Supervisor}{Chamber of Commerce}{Alcoy}{}{Network manager, databse admin, maintenance of the website. Person in charge of the program Nexopyme}
 
 \section{Academic Training}
 \cventry{2006--2008}{Master’s Degree in Free Software}{Open University of Catalonia}{Catalonia}{Grade average: 8,20}{}  % arguments 3 to 6 can be left empty
