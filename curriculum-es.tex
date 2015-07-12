@@ -6,7 +6,8 @@
 % available at http://www.latex-project.org/lppl/.
 
 \documentclass[11pt,a4paper,sans]{moderncv}
-\usepackage[firstyear=2006,lastyear=2015]{moderntimeline}
+\usepackage[firstyear=2002,lastyear=2015]{moderntimeline}
+%\tlwidth{2.0ex}
 
 % moderncv themes
 \moderncvstyle{casual}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
@@ -59,7 +60,34 @@
 % to show numerical labels in the bibliography; only useful if you make citations in your resume
 \makeatletter
 \renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+
+%Fix Modern timeline
+
+\pgfmathsetmacro\tl@textstartabove{\tl@width-2pt}
+\renewcommand{\tldatelabelcventry}[8][color1]{%
+\pgfmathsetmacro\tl@endyear{\tl@lastyear}%
+\pgfmathsetmacro\tl@startfraction{(#2-\tl@firstyear)/(\tl@lastyear-\tl@firstyear)}%
+\pgfmathsetmacro\tl@endfraction{(\tl@endyear-\tl@firstyear)/(\tl@lastyear-\tl@firstyear)}%
+ \cventry{\tikz[baseline]{%
+     \useasboundingbox (0,-1.5ex) rectangle (\hintscolumnwidth,1ex);
+     \fill [\tl@runningcolor] (0,0)
+        rectangle (\hintscolumnwidth,\tl@runningwidth);
+     \fill [#1] (0,0)
+        ++(\tl@startfraction*\hintscolumnwidth,0pt)
+        node [tl@startyear,yshift=5pt,anchor=east] {#3}
+        node {$\bullet$};
+   }
+}
+{#4}{#5}{#6}{#7}{#8}
+}
+
+
 \makeatother
+
+%Fix moderncv timeline
+\tltextstart[north]{\scriptsize}
+\tltextend[south]{\scriptsize}
+
 
 % bibliography with mutiple entries
 \usepackage{multibib}
@@ -80,8 +108,17 @@
 
 \maketitle
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Experiencia
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Experiencia}
+% Embarcadero
 \tlcventry{2014}{0}{Ingenierio de QA Software}{Embarcadero Technologies, Inc.}{Elche}{}{Automatización de las tareas de testeo y diseño de planes de pruebas para productos.}
+
+% UPV
 \tlcventry{2010}{2014}{Técnico de Investigación y Desarrollo de Software}{Universidad Politécnica de Valencia}{Alcoy}{}{Desempeño de tareas de investigación en los proyectos de investigación TacTic y Prometeo. Investigación y desarrollo de algoritmos para renderizar información vectorial sobre entornos 2D y 3D y hacela accesible en tiempo real. Desarrollo de aplicaciones para demostrar su funcionamiento.\newline{}\newline{}
 Detalle de las aplicaciones/algoritmos desarrollados:
 \begin{itemize}
@@ -103,40 +140,64 @@ Detalle de las aplicaciones/algoritmos desarrollados:
 		\end{itemize}
 \end{itemize}}
 
-\tlcventry{2009}{2009}{Técnico de Investigación y Desarrollo de Software}{Instituto Tecnológico de Informática}{Alcoy}{}{Responsable de desarrollo del proyecto VirtualCar para la visualización de automóviles modelizados.}
+%ITI
+\tldatecventry{2009}{Técnico de Investigación y Desarrollo de Software}{Instituto Tecnológico de Informática}{Alcoy}{}{Responsable de desarrollo del proyecto VirtualCar para la visualización de automóviles modelizados.}
+
+%Cámara
 \tlcventry{2006}{2008}{Responsable de Informática}{Cámara Oficial de Comercio e Industria de Alcoy}{}{}{Gestión de la red interna, gestión de las bases de datos y mantenimiento de la web. }%\newline{} Responsable del programa Nexopyme.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Formación Reglada
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \section{Formación Reglada}
-\cventry{2006--2008}{Máster Universitario en Software Libre}{Universitat Oberta de Catalunya}{Barcelona}{Nota media: 8,20}{}  % arguments 3 to 6 can be left empty
-\cventry{2006--2009}{Ingeniero Técnico en Informática de Gestión}{Universidad Politécnica de Valencia}{Alcoy}{Nota media: 7,1}{}
-\cventry{2002--2006}{Ingeniero Técnico de Telecomunicaciones especialidad Telemática}{Universidad Politécnica de Valencia}{Alcoy}{ Nota media 6,7}{}
-\cventry{2009}{Certificado de Aptitud Pedagógica}{Instituto de ciencias de la Educación de la UPV}{Alcoy}{}{}
+
+\tldatecventry{2009}{Certificado de Aptitud Pedagógica}{Instituto de ciencias de la Educación de la UPV}{Alcoy}{}{}
+
+\tlcventry{2006}{2008}{Máster Universitario en Software Libre}{Universitat Oberta de Catalunya}{Barcelona}{Nota media: 8,20}{}  % arguments 3 to 6 can be left empty
+
+\tlcventry{2006}{2009}{Ingeniero Técnico en Informática de Gestión}{Universidad Politécnica de Valencia}{Alcoy}{Nota media: 7,1}{}
+
+\tlcventry{2002}{2006}{Ingeniero Técnico de Telecomunicaciones especialidad Telemática}{Universidad Politécnica de Valencia}{Alcoy}{ Nota media 6,7}{}
 %\cventry{2006}{Grau Mitjà de Coneixements de Valencià}{Junta Qualificadora de Coneixements de Valencià}{}{}{}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Formación Complementaria
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Formación Complementaria}
 
-\cventry{2013}{Principios de programación funcional en Scala}{École Polytechnic Fédérale de Lausanne}{}{}{}
+\tldatecventry{2013}{Principios de programación funcional en Scala}{École Polytechnic Fédérale de Lausanne}{}{}{}
 
-\cventry{2012}{Brainstorm Users Meeting de 40 horas}{Brainstorm Multimedia S.L}{}{}{}
+\tldatecventry{2012}{Brainstorm Users Meeting de 40 horas}{Brainstorm Multimedia S.L}{}{}{}
 
-\cventry{2012}{Curso de Programación para Android de 250 horas}{Escuela Universitaria de
+\tldatecventry{2012}{Curso de Programación para Android de 250 horas}{Escuela Universitaria de
 Formación Abierta del Grupo Master.D}{Universidad Camilo José Cela}{}{}
 
-\cventry{2011}{Desarrollo de Juegos y Aplicaciones Interactivas Multiplataforma (PC, MAC, WEB, IOS, ANDROID) con Unity3D de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
-\cventry{2009}{Documentos Técnicos y Científicos con \LaTeX de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
+\tldatecventry{2011}{Desarrollo de Juegos y Aplicaciones Interactivas Multiplataforma (PC, MAC, WEB, IOS, ANDROID) con Unity3D de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
+\tldatecventry{2009}{Documentos Técnicos y Científicos con \LaTeX de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
 
-\cventry{2009}{Introducción a la programación en C\# y .NET en Windows y Linux de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
+\tldatecventry{2009}{Introducción a la programación en C\# y .NET en Windows y Linux de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
 
-\cventry{2008}{Desarrollo Web avanzado mediante AJAX/GWT (Google Web Toolkit) de 20 horas}{Curso de Formación Permanente}{UPV}{}{}
-\cventry{2006}{Servidores Web de 20 horas}{Curso de Formación de Permanente}{UPV}{}{Incluye configuración del servidor web Apache y de Zope.}
-%\cventry{2006}{Autowebmarketing. Autogestión del Sitio Web Corporativo como Soporte del Plan de Marketing Empresarial de 12 horas}{Academia de las Cámaras}{Consejo Superior de Cámaras de Comercio}{Madrid}{}
-%\cventry{2005}{Seguridad en Redes Corporativas de 30 horas}{Curso de Formación Permanente}{UPV}{}{}
-%\cventry{2004}{Montaje, Planificación y Configuración de Redes Inalámbricas 20 horas}{Curso de Formación Permanete}{UPV}{}{}
+\tldatecventry{2008}{Desarrollo Web avanzado mediante AJAX/GWT (Google Web Toolkit) de 20 horas}{Curso de Formación Permanente}{UPV}{}{}
+
+\tldatecventry{2006}{Servidores Web de 20 horas}{Curso de Formación de Permanente}{UPV}{}{Incluye configuración del servidor web Apache y de Zope.}
+
+\tldatecventry{2006}{Autowebmarketing. Autogestión del Sitio Web Corporativo como Soporte del Plan de Marketing Empresarial de 12 horas}{Academia de las Cámaras}{Consejo Superior de Cámaras de Comercio}{Madrid}{}
+
+\tldatecventry{2005}{Seguridad en Redes Corporativas de 30 horas}{Curso de Formación Permanente}{UPV}{}{}
+
+\tldatecventry{2004}{Montaje, Planificación y Configuración de Redes Inalámbricas 20 horas}{Curso de Formación Permanete}{UPV}{}{}
 
 
 %Formacion Antigua
-%\cventry{2000}{Curso de Windows'95 y de Técnico de Programación en Turbo Pascal 140 horas}{ Centro de Formación – M@rqus}{Alcoy}{}{}
-%\cventry{1999}{Curso "Introducción al montaje y reparación del PC"}{Centro de Formación – M@rqus}{Alcoy}{}{}
+%\cventry{2000}{Técnico de Programación en Turbo Pascal 140 horas}{ Centro de Formación – M@rqus}{Alcoy}{}{}
+%\cventry{1999}{Introducción al montaje y reparación del PC}{Centro de Formación – M@rqus}{Alcoy}{}{}
 
 \section{Idiomas}
 \cvitemwithcomment{Castellano}{Nativo}{}
