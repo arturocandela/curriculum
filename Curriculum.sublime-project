@@ -1,0 +1,23 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"file_exclude_patterns":["*.ps","*.aux","*.dvi","*.out","*.log","*.blg","*.bbl"]
+		}
+	],
+	"build_systems":
+    [
+        {
+            "name": "curriculum-es",
+            "shell_cmd": "./compilar-es.sh"
+        },
+        
+        {
+            "name": "curriculum-en",
+            "shell_cmd": "./compilar-es.sh"
+        },
+        
+        
+    ]
+}
