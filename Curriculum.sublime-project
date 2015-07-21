@@ -15,7 +15,7 @@
         
         {
             "name": "curriculum-en",
-            "shell_cmd": "./compilar-es.sh"
+            "shell_cmd": "./compilar-en.sh"
         },
         
         
