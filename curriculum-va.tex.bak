@@ -30,12 +30,14 @@
 % Problema con el castellano
 %\usepackage[spanish,es-noshorthands]{babel} es-notilde
 %\usepackage[spanish]{babel}
+\usepackage[catalan]{babel}
+
 
 % adjust the page margins
 \usepackage{textcomp}
 
 \usepackage[scale=0.8]{geometry}
-\setlength{\hintscolumnwidth}{3cm}           % si desea cambiar el ando de la columna para las fechas
+\setlength{\hintscolumnwidth}{2.5cm}           % si desea cambiar el ando de la columna para las fechas
 %\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 %\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
@@ -43,14 +45,14 @@
 % personal data
 \firstname{Arturo}
 \familyname{Candela Moltó}
-\title{Currículum Vítae}               % optional, remove the line if not wanted
-\address{Alfonso El Magnánimo 13}{Alcoy, Alicante}    % optional, remove the line if not wanted
+\title{Currículum Vit\ae}               % optional, remove the line if not wanted
+\address{Alfons El Magnànim 13}{Alcoy, Alicante}    % optional, remove the line if not wanted
 \mobile{+34618037813}                    % optional, remove the line if not wanted
 %\phone{phone (optional)}                      % optional, remove the line if not wanted
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
 \email{info@arturocandela.net}                      % optional, remove the line if not wanted
 \homepage{arturocandela.net}                % optional, remove the line if not wanted
-\extrainfo{Nacimiento - marzo 20, 1984}
+\extrainfo{Naixement - març 20, 1984}
 
 %\extrainfo{additional information (optional)} % optional, remove the line if not wanted
 \photo[64pt][0pt]{yo_pro_redondo}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
@@ -68,7 +70,7 @@
 % bibliography with mutiple entries
 \usepackage{multibib}
 %\newcites{book,misc}{{Books},{Others}}
-\newcites{book,web,android,ios}{{Publicaciones},{Webs},{Aplicaciones Android},{Aplicaciones iOS}}
+\newcites{book,web,android,ios}{{Publicacions},{Webs},{Aplicacions Android},{Aplicacions iOS}}
 
 \input{hypersetup.tex}
 
@@ -109,32 +111,13 @@
 \cventry{2014--2015}{Enginyer QA Software}{Embarcadero Technologies, Inc.}{Elch}{}{Automatització de les tasques de testeig i disseny de plans de proves per al producte \textit{ER/Studio Data Architect}}
 
 %UPV
-\cventry{2010--2014}{Tècnic d'investigació i Desenvolupador de Software}{Universitat Politècnica de València}{Alcoi}{}{Desempeño de tareas de investigación en los proyectos de investigación TacTic y Prometeo. Investigación y desarrollo de algoritmos para renderizar información vectorial sobre entornos 2D y 3D y hacela accesible en tiempo real. Desarrollo de aplicaciones para demostrar su funcionamiento.\newline{}\newline{}
-Detalle de las aplicaciones/algoritmos desarrollados:
-\begin{itemize}
-	\item \textbf{Android}:
-		\begin{itemize}
-			\item Desarrollo de un nuevo algoritmo de renderizado 2D de terreno utilizando OpenGL ES para Android para mostrar información vectorial interactiva en tiempo real.
-			\item Aplicación para administrar un dispositivo bluetooth para la monitorización de la tempratura en entornos médicos e industriales
-			\item Aplicaciones para estar a la última de lo que está sucediendo en la ciudad. Incluye información de: tiendas, eventos, teléfonos de interés, puntos de interés en un mapa, rutas cicloturistas. 
-		\end{itemize}
-	\item \textbf{iOS}:
-		\begin{itemize}
-			\item Aplicación para un museo que tiene un juego y un lector de códigos Bidi (QR) con el que el usuario puede encontrar tesoros escondidos y ayudarle si se pierde.
-			\item Aplicaciones para estar a la última de lo que está sucediendo en la ciudad. Incluye información de: tiendas, eventos, teléfonos de interés, puntos de interés en un mapa, rutas cicloturistas. 
-		\end{itemize}
-	\item \textbf{nodejs}
-		\begin{itemize}
-			\item Aplicación de backend que provee de WebServices utilizando el estándar GeoJSON para la aplicación de Android de renderizado de terreno. Utiliza PostgreSQL con el complemento PostGIS y la librería sockets.io para proveer de comunicación en tiempo real.
-			\item Aplicación con JQueryUI para el front-end y para el backend se utilizó nodejs con la base de datos NoSQL CouchDB (couchbase) con la extensión GeoCouch para realizar una aplicación web de edición de información geolozalizada en un mapa en tiempo real.
-		\end{itemize}
-\end{itemize}}
+\cventry{2010--2014}{Tècnic d'investigació i Desenvolupador de Software}{Universitat Politècnica de València}{Alcoi}{}{}
 
 %ITI
-\cventry{2009}{Técnico de Investigación y Desarrollo de Software}{Instituto Tecnológico de Informática}{Alcoy}{}{Responsable de desarrollo del proyecto VirtualCar para la visualización de automóviles modelizados.}
+\cventry{2009}{Técnico de Investigación y Desarrollo de Software}{Instituto Tecnológico de Informática}{Alcoi}{}{Responsable del desenvolupament i el disseny del projecte VirtualCar per a la visualització d'automòbils modelitzats per computador}
 
 %Cámara
-\cventry{2006--2008}{Responsable de Informática}{Cámara Oficial de Comercio e Industria de Alcoy}{}{}{Gestión de la red interna, gestión de las bases de datos y mantenimiento de la web. }%\newline{} Responsable del programa Nexopyme.
+\cventry{2006--2008}{Responsable d'Informàtica}{Cámara Oficial de Comercio e Industria de Alcoy}{Alcoi}{}{Gestió de la xarxa interna, de les bases de dades i mantiniment de la Web}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -143,17 +126,15 @@ Detalle de las aplicaciones/algoritmos desarrollados:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Formación Reglada}
+\section{Formació Reglada}
 
-\cventry{2009}{Certificado de Aptitud Pedagógica}{Instituto de ciencias de la Educación de la UPV}{Alcoy}{}{}
+\cventry{2009}{Certificat d'Aptitud Pedagògica}{Institut de Ciències de la Educació de la UPV}{Alcoi}{}{}
 
-\cventry{2006--2008}{Máster Universitario en Software Libre}{Universitat Oberta de Catalunya}{Barcelona}{Nota media: 8,20}{}  % arguments 3 to 6 can be left empty
+\cventry{2006--2008}{Màster Universitari en Programari Lliure}{Universitat Oberta de Catalunya}{Barcelona}{Nota mitjana en base 10: 8,20. En base 4: 2,21}{}  % arguments 3 to 6 can be left empty
 
-\cventry{2006--2009}{Ingeniero Técnico en Informática de Gestión}{Universidad Politécnica de Valencia}{Alcoy}{Nota media: 7,1}{}
+\cventry{2006--2009}{Enginyer Tècnic en Informàtica de Gestió}{Universitat Politècnica de València}{Alcoi}{Nota mitjana en base 10: 7,1. En base 4: 1,69}{}
 
-\cventry{2002--2006}{Ingeniero Técnico de Telecomunicaciones especialidad Telemática}{Universidad Politécnica de Valencia}{Alcoy}{ Nota media 6,7}{}
-%\cventry{2006}{Grau Mitjà de Coneixements de Valencià}{Junta Qualificadora de Coneixements de Valencià}{}{}{}
-
+\cventry{2002--2006}{Enginyer Tècnic en Telecomunicacions, especialitat Telemàtica}{Universitat Politècnica de València}{Alcoy}{ Nota mitjana en base 10: 6,7. En base 4:1,59}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -162,27 +143,26 @@ Detalle de las aplicaciones/algoritmos desarrollados:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Formación Complementaria}
 
-\cventry{2013}{Principios de programación funcional en Scala}{École Polytechnic Fédérale de Lausanne}{}{}{}
+\cventry{2013}{Principis de la programació funcional en Scala}{Escola Politècnica Federal de Lausanne}{}{}{}
 
 \cventry{2012}{Brainstorm Users Meeting de 40 horas}{Brainstorm Multimedia S.L}{}{}{}
 
-\cventry{2012}{Curso de Programación para Android de 250 horas}{Escuela Universitaria de
-Formación Abierta del Grupo Master.D}{Universidad Camilo José Cela}{}{}
+\cventry{2012}{Curs de Programació per a Android de 250 hores}{Escola Universitària de formació oberta del Grup Master.D, Universidad Camilo José Cela}{Madrid}{}{}
 
-\cventry{2011}{Desarrollo de Juegos y Aplicaciones Interactivas Multiplataforma (PC, MAC, WEB, IOS, ANDROID) con Unity3D de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
-\cventry{2009}{Documentos Técnicos y Científicos con \LaTeX de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
+\cventry{2011}{Desenvolupaments de Jocs i Aplicacions Interactives Multiplataforma (PC, MAC, WEB, IOS, ANDROID) amb Unity3D de 40 hores}{Centre de Formació Permanent}{UPV}{}{}
+\cventry{2009}{Documents Tècnics i Científics amb \LaTeX de 40 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{}
 
-\cventry{2009}{Introducción a la programación en C\# y .NET en Windows y Linux de 40 horas}{Curso de Formación Permanente}{UPV}{}{}
+\cventry{2009}{Introducció a la programació en C\# y .NET a Windows i Linux de 40 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{}
 
-\cventry{2008}{Desarrollo Web avanzado mediante AJAX/GWT (Google Web Toolkit) de 20 horas}{Curso de Formación Permanente}{UPV}{}{}
+\cventry{2008}{Desenvolupament Web Avançat mitjançant AJAX/GWT (Google Web Toolkit) de 20 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{}
 
-\cventry{2006}{Servidores Web de 20 horas}{Curso de Formación de Permanente}{UPV}{}{Incluye configuración del servidor web Apache y de Zope.}
+\cventry{2006}{Servidors Web de 20 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{Inclou la configuració del servidor web Apache i de Zope}
 
-\cventry{2006}{Autowebmarketing. Autogestión del Sitio Web Corporativo como Soporte del Plan de Marketing Empresarial de 12 horas}{Academia de las Cámaras}{Consejo Superior de Cámaras de Comercio}{Madrid}{}
+%\cventry{2006}{Autowebmarketing. Autogestión del Sitio Web Corporativo como Soporte del Plan de Marketing Empresarial de 12 horas}{Academia de las Cámaras}{Consejo Superior de Cámaras de Comercio}{Madrid}{}
 
-\cventry{2005}{Seguridad en Redes Corporativas de 30 horas}{Curso de Formación Permanente}{UPV}{}{}
+\cventry{2005}{Seguretat en Xarxes corporatives de 30 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{}
 
-\cventry{2004}{Montaje, Planificación y Configuración de Redes Inalámbricas 20 horas}{Curso de Formación Permanete}{UPV}{}{}
+\cventry{2004}{Montatje,Planificacio i Configuraci  Montaje, Planificación y Configuración de Redes Inalámbricas 20 horas}{Curso de Formación Permanete}{UPV}{}{}
 
 
 %Formacion Antigua
@@ -196,12 +176,12 @@ Formación Abierta del Grupo Master.D}{Universidad Camilo José Cela}{}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Idiomas}
-\cvitemwithcomment{Castellano}{Nativo}{}
-\cvitemwithcomment{Valenciano}{C1}{Certificado Mitjà por la "Junta Qualificadora de Coneixments de Valencià" en 2006}
-\cvitemwithcomment{Inglés}{B2}{Cambridge English: First Certificate, octubre de 2016}
+\cvlanguage{Castellà}{Natiu}{}
+\cvlanguage{Valencià}{C1}{Certificat Mitjà per la "Junta Qualificadora de Coneixements de Valencià" en 2006}
+\cvlanguage{Anglés}{B2}{Cambridge English: First Certificate, octubre de 2016}
 
 \section{Informática}
-\cvdoubleitem{Lenguajes de Programación}{Objective-C, python, Java, JavaScript, C, C++, C\#}{Plataformas Móviles}{Android, iOS (iPhone e iPad)}
+\cvcomputer{Lenguajes de Programación}{Objective-C, python, Java, JavaScript, C, C++, C\#}{Plataformas Móviles}{Android, iOS (iPhone e iPad)}
 \cvdoubleitem{Bases de Datos}{MongoDB, MySQL,PostgreSQL, SQLite, JavaDB,couchdb}{Trabajo en Grupo}{trac, JIRA, subversion, git (git-flow), SourceTree, Perforce}
 \cvdoubleitem{IDE}{Android Studio, XCode, eclipse, Visual Studio, Netbeans}{Gestión de Sistemas}{Windows, Linux, MacOS}
 
