@@ -35,7 +35,7 @@
 \usepackage{textcomp}
 
 \usepackage[scale=0.8]{geometry}
-\setlength{\hintscolumnwidth}{2.5cm}           % si desea cambiar el ando de la columna para las fechas
+\setlength{\hintscolumnwidth}{3cm}           % si desea cambiar el ando de la columna para las fechas
 %\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
 %\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
@@ -83,7 +83,7 @@
 %  Carta de presentació
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{presentacion-doctorado}
+\input{presentacion-doctorado}
 
 
 %\input{cartapresentacion.tex}
@@ -100,15 +100,7 @@
 \section{Experiencia}
 
 %UPV
-\cventry{2016 -- *}{Técnico de Investigación y Desarrollo de Software}{Universidad Politécnica de Valencia}{Alcoy}{}{Desarrollo de tareas de investigación en el proyecto \href{http://www.inaer.com/es/areaIndustrial/ficha?idp=10}{ontime}
-junto con Babkcock y otros miembros del consorcio. Detalle de los trabajos realizados: \newline{}
-\begin{itemize}
-	\item Desarrollo del protocolo de comunicaciones para la transmisión de información remota en redes de baja fiabilidad y alta latencia mediante mensajes unificados. El protocolo se ha desarrollado utilizando RabbitMQ y los mensajes se han encapsulado con \href{https://avro.apache.org/}{Avro} de forma que el footprint del mensaje fuera lo más pequeño posible.
-	\item Desarrollo de un Driver en C++ y en C\# para la obtención de imágenes en tiempo real de la cámara Multiespectral Quest Condor 5 BS20
-	\item Implementación de un sistema para guardar y agregar metadatos a imágenes (Sensorizaciones) mediante exiftool
-	\item Programación de una aplicación en iOS para ayudar al cálculo de las dosis de fármacos que los médicos han de inyectar a los pacientes en función de sus características.
-	\item Participación en el Proyecto MyMate para desarrollar una plataforma para la asistencia a personas de la 3ª edad.
-\end{itemize}}
+\cventry{2016 -- *}{Técnico de Investigación y Desarrollo de Software}{Universidad Politécnica de Valencia}{Alcoy}{}{Desarrollo de tareas de investigación en el proyecto \href{http://www.inaer.com/es/areaIndustrial/ficha?idp=10}{ontime}}
 
 %Everis
 \cventry{2015--2016}{Analista de Software Senior}{Everis Centers, S.L.}{Alicante}{}{Desarrollo, diseño e implementación de soluciones en iOS. Formación de los compañeros en las tecnologías utilizadas.}
@@ -117,7 +109,7 @@ junto con Babkcock y otros miembros del consorcio. Detalle de los trabajos reali
 \cventry{2014--2015}{Ingenierio de QA Software}{Embarcadero Technologies, Inc.}{Elche}{}{Automatización de las tareas de testeo y diseño de planes de pruebas para productos.}
 
 %UPV
-\cventry{2010--2014}{Técnico de Investigación y Desarrollo de Software}{Universidad Politécnica de Valencia}{Alcoy}{}{Desempeño de tareas de investigación en los proyectos de investigación TacTic y Prometeo (Junto con Inaer). Investigación y desarrollo de algoritmos para renderizar información vectorial sobre entornos 2D y 3D y hacela accesible en tiempo real. Desarrollo de aplicaciones para demostrar su funcionamiento.\newline{}\newline{}
+\cventry{2010--2014}{Técnico de Investigación y Desarrollo de Software}{Universidad Politécnica de Valencia}{Alcoy}{}{Desempeño de tareas de investigación en los proyectos de investigación TacTic y Prometeo. Investigación y desarrollo de algoritmos para renderizar información vectorial sobre entornos 2D y 3D y hacela accesible en tiempo real. Desarrollo de aplicaciones para demostrar su funcionamiento.\newline{}\newline{}
 Detalle de las aplicaciones/algoritmos desarrollados:
 \begin{itemize}
 	\item \textbf{Android}:
@@ -152,11 +144,6 @@ Detalle de las aplicaciones/algoritmos desarrollados:
 
 
 \section{Formación Reglada}
-
-
-\cventry{2016-*}{Doctorat en Sistemas de Información y Redes}{Unidad de Doctorado de la UOC}{on-line}{}{}
-
-\cventry{2016}{Capacitació per a l'ensenyament en Valencià}{Centro de Formación de Post Grado de la UPV}{on-line}{}{}
 
 \cventry{2009}{Certificado de Aptitud Pedagógica}{Instituto de ciencias de la Educación de la UPV}{Alcoy}{}{}
 
@@ -214,9 +201,9 @@ Formación Abierta del Grupo Master.D}{Universidad Camilo José Cela}{}{}
 \cvitemwithcomment{Inglés}{B2}{Cambridge English: First Certificate, octubre de 2016}
 
 \section{Informática}
-\cvdoubleitem{Lenguajes}{Objective-C, python, Java, JavaScript, C, C++, C\#}{Plataformas Móviles}{Android, iOS (iPhone e iPad)}
-\cvdoubleitem{DB}{MongoDB, MySQL,PostgreSQL, SQLite}{Workgroup}{JIRA, svn, git (git-flow), SourceTree, Perforce}
-\cvdoubleitem{IDEs}{Android Studio, XCode, eclipse, Visual Studio, Netbeans, IntelliJ Idea, Visual Studio Code}{Gestión de Sistemas}{Windows, Linux, MacOS}
+\cvdoubleitem{Lenguajes de Programación}{Objective-C, python, Java, JavaScript, C, C++, C\#}{Plataformas Móviles}{Android, iOS (iPhone e iPad)}
+\cvdoubleitem{Bases de Datos}{MongoDB, MySQL,PostgreSQL, SQLite, JavaDB,couchdb}{Trabajo en Grupo}{trac, JIRA, subversion, git (git-flow), SourceTree, Perforce}
+\cvdoubleitem{IDE}{Android Studio, XCode, eclipse, Visual Studio, Netbeans}{Gestión de Sistemas}{Windows, Linux, MacOS}
 
 %\section{Extra 1}
 %\cvlistitem{Item 1}

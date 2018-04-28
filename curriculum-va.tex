@@ -1,0 +1,310 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+%\usepackage[firstyear=2006,lastyear=2015]{moderntimeline}
+%\tlwidth{2.0ex}
+
+
+% moderncv themes
+\moderncvstyle{casual}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvicons{awesome}
+
+
+\moderncvcolor{green}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+%\ifpdf
+%\RequirePackage[pdftex,]{hyperref}
+%\else
+%\RequirePackage[dvips]{hyperref}
+%\fi
+
+\usepackage[unicode,unicode,pdfpagelabels=false]{hyperref}
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+% Problema con el castellano
+%\usepackage[spanish,es-noshorthands]{babel} es-notilde
+%\usepackage[spanish]{babel}
+\usepackage[catalan]{babel}
+
+
+% adjust the page margins
+\usepackage{textcomp}
+
+%\usepackage[document]{ragged2e}
+
+\usepackage[scale=0.8]{geometry}
+\setlength{\hintscolumnwidth}{2.5cm}          % si desea cambiar el ando de la columna para las fechas
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Arturo}
+\familyname{Candela i Moltó}
+\title{Currículum Vit\ae}               % optional, remove the line if not wanted
+\address{Alfons El Magnànim 13}{Alcoi, Alacant}    % optional, remove the line if not wanted
+\mobile{+34618037813}                    % optional, remove the line if not wanted
+%\phone{phone (optional)}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{info@arturocandela.net}                      % optional, remove the line if not wanted
+\homepage{arturocandela.net}                % optional, remove the line if not wanted
+\extrainfo{Naixement - març 20, 1984}
+
+%\extrainfo{additional information (optional)} % optional, remove the line if not wanted
+\photo[64pt][0pt]{yo_pro_redondo}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{El emprendedor no es un soñador, es un hacedor}                
+%\quote{Todo viaje de mil millas empieza con el primer paso, Lao-tzu}
+% optional, remove the line if not wanted
+
+% to show numerical labels in the bibliography; only useful if you make citations in your resume
+\makeatletter
+\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+
+
+\makeatother
+
+% bibliography with mutiple entries
+\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+\newcites{book,web,android,ios}{{Publicacions},{Webs},{Aplicacions Android},{Aplicacions iOS}}
+
+\input{hypersetup.tex}
+
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Carta de presentació
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{presentacion-doctorado}
+
+
+%\input{cartapresentacion.tex}
+%\clearpage
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Experiencia
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experiència}
+
+%UPV
+\cventry{2016 -- *}{Tècnic d'investigació i Desenvolupador de Software}{Universitat Politècnica de València}{Alcoi}{}{
+Desenvolupament de tasques d'investigació al projectes Ontime, \href{https://www.eurostars-eureka.eu/project/id/9831}{HAI-OPS:}\textit{ Hospital Acquired Infection and Outbreak Prevention System}, \href{https://www.eurostars-eureka.eu/project/id/9770}{i-Light:}\textit{A pervasive home monitoring system based on intelligent luminaires}, diversos projectes conjuntament amb l'Hospital Universitari Politècnic La Fe i altres tasques:\newline{}
+\begin{itemize}
+	\item \textbf{Ontime:}
+		\begin{itemize}
+			\item Disseny i implementació de l'estructura de dades per a donar suport a un sistema informàtic per al suport de dels transports en \textit{HEMS - Helicòpters dels Serveis d'Emergències Mèdiques}.
+			\item Disseny de l'estratègia per a integrar diferents tipus de sensors metges, ambientals i òptics a un Framework comú y posterior integració.
+			\item Desenvolupament d'una aplicació Android de prova de concepte del sistema HEMS anterior per a donar suport a la feina del metge que realitza el transport
+		\end{itemize}
+	\item \textbf{HAI-OPS and i-Light} 
+	\begin{itemize}
+		\item Disseny del protocol de comunicacions JSON/REST per que els diversos  dispositius pogueren comunicar-se, la base de dades i una base de dades per a poder desar tota la informació
+		\end{itemize}		
+\end{itemize}
+}
+
+%Everis
+\cventry{2015--2016}{Analista de Software Sènior en Mobilitat}{Everis Centers, S.L.}{Alacant}{}{Desenvolupament, disseny i implementació de solucions per a la plataforma mòbil iOS. Formació dels companys en les tecnologies utilitzades. Tasques desenvolupades:\newline{}
+\begin{itemize}
+	\item \textbf{Git:} Concepció de l'estratègia per a combinar els diversos desenvolupaments de l'equip amb submòduls i diverses rames
+	\item \textbf{Jenkins:} Instal·lació i configuració del codi font per a realitzar testing automatitzat sobre el codi també per a que realitzara diversos anàlisis estàtics
+	\item \textbf{SonarQube:} Instal·lació i configuració d'aquesta ferramenta per a obtenir mes tipus d'anàlisi estàtic de codi.
+\end{itemize}
+}
+
+%Embarcadero
+\cventry{2014--2015}{Enginyer QA Software}{Embarcadero Technologies, Inc.}{Elx}{}{Automatització de les tasques de testeig i disseny de plans de proves per al producte: \textit{ER/Studio Data Architect}\newline{}
+\begin{itemize}
+	\item Integració d'un dels components de la interfície gràfica amb la interfície IAccessible de \textit{Microsoft} per a que fora visible mitjançant la ferramenta CodedUI per a poder testejar
+	\item Muntatge de tota la infraestructura necessària per poder validar que \textit{ER/Studio Data Architect}  podia integrar-se amb \textbf{MongoDB}
+	\item Escriptura de tests generals del producte i a més per a tot el procés de certificació de \textbf{MongoDB} 
+	\item Automatització de tests de la interfície gràfica utilitzant CodedUI
+\end{itemize}
+}
+
+%UPV
+\cventry{2010--2014}{Tècnic d'investigació i Desenvolupador de Software}{Universitat Politècnica de València}{Alcoi}{}{
+Desenvolupament de tasques d'investigació en el projectes d'investigació Avanza TacTic financiat pel Ministeri d'Indústria i Comerç i el projecte CENIT Prometeo per a la lluita contra incendis financiat per Centre de Desenvolupament Tecnològic Industria. Investigació i desenvolupament d'algoritmes per a renderitzar informació vectorial en entorns 3D i 2D i fer-la accessible en temps real. Desenvolupament d'aplicacions per a demostrar el seu funcionament.Detall de les aplicacions desenvolupades:\newline{}
+\begin{itemize}
+	\item \textbf{Android}:
+		\begin{itemize}
+			\item Desenvolupament d'un nou algoritme de renderitzat 2D de terreny per Android basat en OpenGL ES per a mostrar informació vectorial interactiva en temps reial
+			\item Aplicació per a administrar el dispositiu per al mesurament i control de temperatura en entorns metges e industrials \httplink[Thercom]{http://innovatecsc.com/es/portfolio_category/thercom/} 
+			\item Desenvolupament d'aplicacions \textit{SmartCities} i de tota la seva infraestructura de servidor per a mostrar i actualitzar informació de: tendes, events, telèfons d'interès, punts d'interès a un mapa, rutes cicloturistes
+		\end{itemize}
+	\item \textbf{iOS}:
+		\begin{itemize}
+			\item Aplicacio per a un museu que inclou un joc i un lector de codis Bidi(QR) de manera que l'usuari pot trobar tresors amagats i obtindre la localització a un mapa si es perd. 
+			\item Desenvolupament d'aplicacions \textit{SmartCities} i de tota la seva infraestructura de servidor per a mostrar i actualitzar informació de: tendes, events, telèfons d'interès, punts d'interès a un mapa, rutes cicloturistes
+		\end{itemize}
+	\item \textbf{nodejs}:
+		\begin{itemize}
+		 \item Aplicacio de \textit{backend} que que proveïx de WebServices utilitzant l'estàndard GeoJSON per a una aplicació d'android de renderizat de terreny. Utilitza PostgreSQL amb el complement PostGIS i la llibreria Sockets.io per a dotar el sistema de comunicacio en temps real. A part de l'aplicacio d'Android, el sistema permetia diversos clients, i a mes es va connectar al Middleware ZeroC Ice per a que s'interconnectara amb diverses fonts.
+		 \item Aplicacio JQueryUI per al \textit{frontend} i per al backend nodejs amb la base de dades NoSQL CouchDB (couchbase) amb el complement GeoCouch per a realitzar una aplicacio web d'edició d'informació geolocalitzada en un mapa en temps real  
+		\end{itemize}
+\end{itemize}
+}
+
+%ITI
+\cventry{2009}{Tècnic d'investigació i Desenvolupador de Software}{Institut Tecnològic d'Informàtica}{Alcoi}{}{Responsable del desenvolupament i el disseny del projecte VirtualCar per a la visualització d'automòbils modelitzats per computador. Tasques Desenvolupades:\newline{}
+\begin{itemize}
+	\item Procés de totes les parts del cotxe i creació de peces en diferents nivell de detall per a que el motor gràfic funcionara en temps real, per a que segons com de prop estiga de l'usuari mostre unes amb mes resolució o altres amb menys.
+	\item Creació d'aplicacions de manera que els fabricants pugen mantenir la informació que el VirtualCar mostra d'ells actualitzada.
+	\item Realització de totes les funcions necessàries per a dotar d'interactivitat al producte
+\end{itemize}
+}
+
+%Cámara
+\cventry{2006--2008}{Responsable d'Informàtica}{Cambra Oficial de Comerç i Industria d'Alcoi}{Alcoi}{}{Gestió de la xarxa interna, de les bases de dades i manteniment de la Web. Tasques Desenvolupades:\newline{}
+\begin{itemize}
+	\item Responsable del programa NexoPyme - Fou un programa que pretenia contribuir a la millora de la competitivitat de les xicotets i mitjanes empreses ajudant-les a introduir-se en món on-line amb una serie d'actuacions molt concretes.
+	\item Generació d'un programa de Quadre de Comandaments am l'aplicació QlikView que integrava informació de diverses bases de dades per a que el membres de la Cambra pogueren analitzar millor les dades. 
+	\item Desenvolupament d'un software de gestió de xarxa que permet tenir unificades totes les dades en un mateix registre
+\end{itemize}
+}
+
+\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Formación Reglada
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Formació Reglada}
+
+\cventry{2009}{Certificat d'Aptitud Pedagògica}{Institut de Ciències de la Educació de la UPV}{Alcoi}{}{}
+
+\cventry{2006--2008}{Màster Universitari en Programari Lliure}{Universitat Oberta de Catalunya}{Barcelona}{Nota mitjana en base 10: 8,20. En base 4: 2,21}{}  % arguments 3 to 6 can be left empty
+
+\cventry{2006--2009}{Enginyer Tècnic en Informàtica de Gestió}{Universitat Politècnica de València}{Alcoi}{Nota mitjana en base 10: 7,1. En base 4: 1,69}{}
+
+\cventry{2002--2006}{Enginyer Tècnic en Telecomunicacions, especialitat Telemàtica}{Universitat Politècnica de València}{Alcoy}{ Nota mitjana en base 10: 6,7. En base 4:1,59}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Formación Complementaria
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cursos}
+
+\cventry{2013}{Principis de la programació funcional en Scala}{Escola Politècnica Federal de Lausanne}{}{}{}
+
+\cventry{2012}{Brainstorm Users Meeting de 40 hores}{Brainstorm Multimedia S.L}{}{}{}
+
+\cventry{2012}{Curs de Programació per a Android de 250 hores}{Escola Universitària de formació oberta del Grup Master.D, Universidad Camilo José Cela}{Madrid}{}{}
+
+\cventry{2011}{Desenvolupaments de Jocs i Aplicacions Interactives Multi-plataforma (PC, MAC, WEB, IOS, ANDROID) amb Unity3D de 40 hores}{Centre de Formació Permanent}{UPV}{}{}
+\cventry{2009}{Documents Tècnics i Científics amb \LaTeX de 40 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{}
+
+\cventry{2009}{Introducció a la programació en C\# y .NET a Windows i Linux de 40 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{}
+
+\cventry{2008}{Desenvolupament Web Avançat mitjançant AJAX/GWT (Google Web Toolkit) de 20 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{}
+
+\cventry{2006}{Servidors Web de 20 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{Inclou la configuració del servidor web Apache i de Zope}
+
+%\cventry{2006}{Autowebmarketing. Autogestión del Sitio Web Corporativo como Soporte del Plan de Marketing Empresarial de 12 horas}{Academia de las Cámaras}{Consejo Superior de Cámaras de Comercio}{Madrid}{}
+
+\cventry{2005}{Seguretat en Xarxes corporatives de 30 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{}
+
+\cventry{2004}{Planificació i Configuració de Xarxes Wi-Fi de 20 hores}{Centre de Formació Permanent de la UPV}{UPV}{}{}
+
+
+%Formacion Antigua
+\cventry{2000}{Tècnic de programació en Turbo Pascal de 140 hores}{ Centre de formació M@rqus}{Alcoi}{}{}
+%\cventry{1999}{Introducción al montaje y reparación del PC}{Centro de Formación – M@rqus}{Alcoy}{}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Idiomas
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Idiomes}
+\cvlanguage{Castellà}{Natiu}{}
+\cvlanguage{Valencià}{C1}{\textbf{Certificat Mitjà} per la \textbf{Junta Qualificadora de Coneixements de Valencià},setembre de 2006}
+\cvlanguage{Anglés}{B2}{\textbf{Cambridge English}: \textbf{First Certificate}, octubre de 2016}
+
+\section{Informàtica}
+\cvcomputer{Llenguatjes de Programació}{Objective-C, python, Java, C, C++, C\#}{Plataformes Mòbils}{Android, iOS (iPhone e iPad)}
+\cvcomputer{Bases de Dades}{MongoDB, MySQL,PostgreSQL, SQLite, JavaDB,couchdb}{Ferramentes de Treball en grup}{JIRA, subversion, git (git-flow), SourceTree, Perforce, bitbucket, gitlab, gitbucket, trac}
+\cvcomputer{IDE}{Android Studio, XCode, eclipse, Visual Studio, Netbeans}{Administració de sistemes}{Windows, Linux, MacOS}
+
+%\section{Extra 1}
+%\cvlistitem{Item 1}
+%\cvlistitem{Item 2}
+%\cvlistitem[+]{Item 3}            % optional other symbol
+%
+%\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+%
+%\section{Extra 2}
+%\cvlistdoubleitem{Item 1}{Item 4}
+%\cvlistdoubleitem{Item 2}{Item 5}
+%\cvlistdoubleitem{Item 3}{ }
+
+% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+
+\section{Dossier}
+
+%\nociteandroid{android:mislugares}
+\nociteandroid{android:wheelingmobileapp}
+\nociteandroid{android:thercomapp}
+\nociteandroid{android:elhondoapp}
+\nociteandroid{android:catralcityapp}
+
+\bibliographystyleandroid{plain}
+\bibliographyandroid{publications}
+
+\nociteios{ios:westvirginiamuseumapp}
+\nociteios{ios:catralcityapp}
+\nociteios{ios:elhondocityapp}
+\nociteios{ios:oglebayapp}
+
+\bibliographystyleios{plain}
+\bibliographyios{publications}
+
+\nocitebook{graficos_max_potencia}
+\nocitebook{mobweb}
+\bibliographystylebook{plain}
+\bibliographybook{publications}   % 'publications' is the name of a BibTeX file
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Idiomas
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\section{Altres}
+%\cvlistitem{Permís de conduir B}
+%\cvlistitem{Entusiasta del programari lliure}
+%\cvlistitem{bricolador}
+%\cvlistitem{brico-programador}
+\end{document}
+
+
+%% end of file `template_en.tex'.

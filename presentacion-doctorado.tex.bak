@@ -1,0 +1,31 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Carta de presentació
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\recipient{Escola de Doctorat}{Av. Carl Friedrich Gauss, 5\\08860 Castelldefels\\UOC - Castelldefels PMT}
+\date{\today}
+\opening{Benvolguts membres de la Comisió Acadèmica del programa de Doctorat en Tecnologies de la Informació i Xarxes,}
+\closing{Atentament,}
+\enclosure[Adjunt]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+
+
+
+
+\makelettertitle
+
+Després d'haver finalitzat els meus estudis de \textbf{Màster en Programari Lliure} de la UOC i haver treballat durant X anys en Investigació, us envie la meva sol·licitud i candidatura per al Programa de Doctorat en Tecnologies de la Informació i Xarxes que la Universitat Oberta de Catalunya ofereix.
+
+Els meus estudis i treball han anat sempre al voltant del desenvolupament de programari. Als meus estudis, les matèries que més m'han motivat han segut totes les relacionades en programació, xarxes de computadors, estructures de dades i algoritmes, disseny de bases de dades i seguretat informàtica. Durant el meu treball en el camp de de la investigació, he dissenyat i implementat tota mena de sistemes informàtics: sistemes 3D, de bases de dades distribuïdes i geogràfiques, aplicacions per a mòbils en diverses plataformes, etcètera.
+
+Particularment estic interessat en el programa de \textbf{Doctorat en Tecnologies de la Informació i Xarxes} en la línia de recerca \textbf{Design of e-healthcare systems as a step forward towards their improvement and sustainability} perquè vull aprofundir i dotar de sentit al coneixements i habilitats que he anat adquirint durant els anys de manera que puga retornar a la societat una part del que ha invertit en mi durant els anys.
+
+Voldria realitzar el programa de Doctorat, i en concret a la UOC, perquè ja tinc l'experiència d'haver realitzat el \textit{Màster Universitari en Programari Lliure} que fou molt gratificant. Posteriorment a la UOC he cursat diversa formació on-line no universitària i la veritat es que no he quedat ni de lluny tan satisfet com amb vosaltres: el materials estaven des-actualitzats, el seguiment dels professors no era tan exhaustiu com el vostre i a mes, vosaltres doneu un servei d'atenció molt orientat a la persona; encara que la formació és a distancia es quasi com si us tingues al costat. 
+
+
+\makeletterclosing
+
+\clearpage
