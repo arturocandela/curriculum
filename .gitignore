@@ -24,3 +24,5 @@
 *.ps
 *.synctex.gz
 Curriculum.sublime-workspace
+curriculum-es.fdb_latexmk
+curriculum-es.fls
