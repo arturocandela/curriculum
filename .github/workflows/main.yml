@@ -41,14 +41,6 @@ jobs:
         head: develop
         base: main
 
-    - name: Create Tag
-      if: success()
-      uses: actions/create-tag@v1
-      with:
-        tag_name: ${{ env.TAG_NAME }}
-        ref: ${{ env.TAG_NAME }}
-        message: "Automatic PDF generation - version ${{ env.TAG_NAME }}"
-        token: ${{ secrets.GITHUB_TOKEN }}
     - name: Error
       if: failure()
       uses: actions/github-script@v3
