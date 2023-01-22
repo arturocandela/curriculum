@@ -16,7 +16,7 @@ jobs:
         ref: develop
 
     - name: Cache TeX Live
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       id: texlive
       with:
         path: /usr/local/texlive
