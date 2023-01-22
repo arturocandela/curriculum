@@ -40,5 +40,5 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         title: "Automatic PDF generation"
-        head: develop
+        branch: develop
         base: main
