@@ -1,6 +1,6 @@
-all: curriculum.pdf
+all: curriculum-es.pdf curriculum-en.pdf
 
-%.pdf: %.tex %.bib
+%.pdf: %.tex
 	latex $<
 	bibtex ios
 	bibtex android
@@ -11,4 +11,4 @@ all: curriculum.pdf
 	ps2pdf $(basename $<).ps
 
 clean:
-	rm -f *.aux *.out *.log *.bbl *.blg *.pdf
+	rm -f *.aux *.dvi *.ps *.out *.log *.bbl *.blg *.pdf

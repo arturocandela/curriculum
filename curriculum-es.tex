@@ -1,21 +1,8 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
 \documentclass[11pt,a4paper,sans]{moderncv}
 %\usepackage[firstyear=2006,lastyear=2021]{moderntimeline}
 %\tlwidth{2.0ex}
 
-
-% moderncv themes
-\moderncvstyle{casual}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvicons{awesome}
-
-
-\moderncvcolor{green}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\input{configModernCV}
 
 %\ifpdf
 %\RequirePackage[pdftex,]{hyperref}
@@ -25,76 +12,33 @@
 
 \usepackage[unicode,unicode,pdfpagelabels=false]{hyperref}
 
-% character encoding
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
-% Problema con el castellano
-%\usepackage[spanish,es-noshorthands]{babel} es-notilde
-%\usepackage[spanish]{babel}
 
-% adjust the page margins
 \usepackage{textcomp}
 
 \usepackage[scale=0.8]{geometry}
-\setlength{\hintscolumnwidth}{2.5cm}           % si desea cambiar el ando de la columna para las fechas
-%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
-%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-%\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+\setlength{\hintscolumnwidth}{2.5cm}           
 
-% personal data
-\firstname{Arturo}
-\familyname{Candela Moltó}
-\title{Currículum Vitae}               % optional, remove the line if not wanted
-\address{San Juan Bosco 3, ENT B}{03804 San Juan (Alicante)}    % optional, remove the line if not wanted
-\mobile{618037813}                    % optional, remove the line if not wanted
-%\phone{phone (optional)}                      % optional, remove the line if not wanted
-%\fax{fax (optional)}                          % optional, remove the line if not wanted
-\email{arturocandela@outlook.es}                      % optional, remove the line if not wanted
-\homepage{twitter.com/arturocandela}                % optional, remove the line if not wanted
-\extrainfo{Nacimiento - marzo 20, 1984}
-
-%\extrainfo{additional information (optional)} % optional, remove the line if not wanted
-\photo[64pt][0pt]{yo_pro_redondo}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
-%\quote{El emprendedor no es un soñador, es un hacedor}                
-%\quote{Todo viaje de mil millas empieza con el primer paso, Lao-tzu}
-% optional, remove the line if not wanted
+% personal data  
+\input{configPersonal}                      
 
 % to show numerical labels in the bibliography; only useful if you make citations in your resume
 \makeatletter
 \renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
 
-
 \makeatother
 
-% bibliography with mutiple entries
 \usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
 \newcites{published,web,android,ios}{{Publicaciones},{Webs},{Aplicaciones Android},{Aplicaciones iOS}}
 
-\hypersetup{
-    colorlinks=true,
-       urlcolor=color1,
-       linkcolor=color1,
-       pdfpagelayout=SinglePage,
-       pdfnewwindow=true,
-       pdfstartview=FitV
-}
+\input{configHypersetup}
 
 \nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%  Carta de presentació
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{presentacion-doctorado}
-
-
-%\input{cartapresentacion.tex}
-%\clearpage
 
 \maketitle
 
@@ -108,19 +52,19 @@
 
 %Profesor
 
-\cventry{2022 -- *}{Profesor de Informática en Educación Secundaria}{Ministerio de Educacion}{Alcoy}{}{Cuerpo de Profesores de Educacion Secundaria en institutos Administrados por la Consellería de Educación}
-\cventry{2021 -- 2022}{Profesor de Informática en FP}{Ministerio de Educacion}{Alcoy}{}{Cuerpo de Profesores de Educacion Secundaria Profesional en institutos Administrados por la Consellería de Educación}
-\cventry{2020 -- 2021}{Profesor Técnico de Informática en FP}{Ministerio de Educacion}{Alcoy}{}{Cuerpo de Profesores Técnicos de Formación Profesional en institutos Administrados por la Consellería de Educación}
+\cventry{2022--*}{Profesor de Informática en Educación Secundaria}{Ministerio de Educacion}{Alcoy}{}{Cuerpo de Profesores de Educacion Secundaria en institutos Administrados por la Consellería de Educación}
+\cventry{2021--2022}{Profesor de Informática en FP}{Ministerio de Educacion}{Alcoy}{}{Cuerpo de Profesores de Educacion Secundaria Profesional en institutos Administrados por la Consellería de Educación}
+\cventry{2020--2021}{Profesor Técnico de Informática en FP}{Ministerio de Educacion}{Alcoy}{}{Cuerpo de Profesores Técnicos de Formación Profesional en institutos Administrados por la Consellería de Educación}
 \cventry{2019, junio}{Profesor Técnico de Informática en FP}{Ministerio de Educacion}{Gandia}{}{Cuerpo de Profesores Técnicos de Formación Profesional en institutos Administrados por la Consellería de Educación}
 \cventry{2019, mayo}{Profesor Técnico de Informática en FP}{Ministerio de Educación}{Ibi}{}{Cuerpo de Profesores Técnicos de Formación Profesional en institutos Administrados por la Consellería de Educación}
 
 %Babcock
-\cventry{2018 -- 2019}{Ingeniero de Producto I+D}{Babcock MCS Fleet Management}{Muchamiel}{}{Asegurar la calidad de los dispositivos
+\cventry{2018--2019}{Ingeniero de Producto I+D}{Babcock MCS Fleet Management}{Muchamiel}{}{Asegurar la calidad de los dispositivos
 embarcados en aeronaves, planificar los desarrollos de nuevas funcionalidades y gestión de sus requisitos}
 
 %UPV
-\cventry{2016 -- 2018}{Técnico de Investigación y Desarrollo de Software}{Universidad Politécnica de Valencia}{Alcoy}{}{Desarrollo de tareas de investigación en el proyecto \href{http://www.inaer.com/es/areaIndustrial/ficha?idp=10}{ontime}
-junto con Babkcock y otros miembros del consorcio. Detalle de los trabajos realizados: \newline{}
+\cventry{2016--2018}{Técnico de Investigación y Desarrollo de Software}{Universidad Politécnica de Valencia}{Alcoy}{}{Desarrollo de tareas de investigación en el proyecto \href{http://www.inaer.com/es/areaIndustrial/ficha?idp=10}{ontime}
+junto con Babcock y otros miembros del consorcio. Detalle de los trabajos realizados: \newline{}
 \begin{itemize}
 	\item Desarrollo del protocolo de comunicaciones para la transmisión de información remota en redes de baja fiabilidad y alta latencia mediante mensajes unificados. El protocolo se ha desarrollado utilizando RabbitMQ y los mensajes se han encapsulado con \href{https://avro.apache.org/}{Avro} de forma que el footprint del mensaje fuera lo más pequeño posible.
 	\item Desarrollo de un Driver en C++ y en C\# para la obtención de imágenes en tiempo real de la cámara Multiespectral Quest Condor 5 BS20
@@ -169,7 +113,6 @@ Detalle de las aplicaciones/algoritmos desarrollados:
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \section{Formación Reglada}
 
 \cventry{2016}{Capacitació per a l'ensenyament en Valencià}{Centro de Formación de Post Grado de la UPV}{on-line}{}{}
@@ -181,8 +124,6 @@ Detalle de las aplicaciones/algoritmos desarrollados:
 \cventry{2006--2009}{Ingeniero Técnico en Informática de Gestión}{Universidad Politécnica de Valencia}{Alcoy}{Nota media: 7,1}{}
 
 \cventry{2002--2006}{Ingeniero Técnico de Telecomunicaciones especialidad Telemática}{Universidad Politécnica de Valencia}{Alcoy}{ Nota media 6,7}{}
-%\cventry{2006}{Grau Mitjà de Coneixements de Valencià}{Junta Qualificadora de Coneixements de Valencià}{}{}{}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -234,24 +175,6 @@ Formación Abierta del Grupo Master.D}{Universidad Camilo José Cela}{}{}
 \cvdoubleitem{DB}{MongoDB, MySQL,PostgreSQL, SQLite}{Workgroup}{JIRA, svn, git (git-flow), SourceTree, Perforce}
 \cvdoubleitem{IDEs}{Android Studio, XCode, eclipse, Visual Studio, Netbeans, IntelliJ Idea, Visual Studio Code}{Gestión de Sistemas}{Windows, Linux, MacOS}
 
-%\section{Extra 1}
-%\cvlistitem{Item 1}
-%\cvlistitem{Item 2}
-%\cvlistitem[+]{Item 3}            % optional other symbol
-%
-%\renewcommand{\listitemsymbol}{-} % change the symbol for lists
-%
-%\section{Extra 2}
-%\cvlistdoubleitem{Item 1}{Item 4}
-%\cvlistdoubleitem{Item 2}{Item 5}
-%\cvlistdoubleitem{Item 3}{ }
-
-% Publications from a BibTeX file without multibib\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% for BibTeX numerical labels
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{publications}       % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
 \section{Portfolio}
 
 %\nociteandroid{android:mislugares}
@@ -274,15 +197,8 @@ Formación Abierta del Grupo Master.D}{Universidad Camilo José Cela}{}{}
 \nocitepublished{published:graficos_max_potencia}
 \nocitepublished{published:mobweb}
 \bibliographystylepublished{plain}
-\bibliographypublished{curriculum}   % 'publications' is the name of a BibTeX file
-
+\bibliographypublished{curriculum}
 \section{Otros}
 \cvlistitem{Permiso de conducir B}
 
-
-
-
 \end{document}
-
-
-%% end of file `template_en.tex'.
