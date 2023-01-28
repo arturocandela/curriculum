@@ -1,4 +1,4 @@
-all: curriculum-es.pdf
+all: curriculum-es.pdf curriculum-en.pdf
 
 %.pdf: %.tex
 	latex $<

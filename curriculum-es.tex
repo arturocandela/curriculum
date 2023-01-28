@@ -2,9 +2,7 @@
 %\usepackage[firstyear=2006,lastyear=2021]{moderntimeline}
 %\tlwidth{2.0ex}
 
-\moderncvstyle{casual}
-\moderncvicons{awesome}
-\moderncvcolor{orange} 
+\input{configModernCV}
 
 %\ifpdf
 %\RequirePackage[pdftex,]{hyperref}
@@ -21,16 +19,8 @@
 \usepackage[scale=0.8]{geometry}
 \setlength{\hintscolumnwidth}{2.5cm}           
 
-% personal data
-\firstname{Arturo}
-\familyname{Candela Moltó}
-\title{Currículum Vitae}              
-\address{San Juan Bosco 3, ENT B}{03804 San Juan (Alicante)}   
-\email{arturocandela@outlook.es} 
-\social[linkedin]{arturocandela}
-\social[twitter]{arturocandela}
-\born{20/3/1984,Alcoy}
-\photo[64pt][0pt]{yo_pro_redondo}                         
+% personal data  
+\input{configPersonal}                      
 
 % to show numerical labels in the bibliography; only useful if you make citations in your resume
 \makeatletter
@@ -41,7 +31,7 @@
 \usepackage{multibib}
 \newcites{published,web,android,ios}{{Publicaciones},{Webs},{Aplicaciones Android},{Aplicaciones iOS}}
 
-\input{hypersetup.tex}
+\input{configHypersetup}
 
 \nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 
